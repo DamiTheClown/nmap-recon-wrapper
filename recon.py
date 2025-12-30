@@ -2,8 +2,6 @@ import subprocess
 from datetime import datetime
 import os
 
-from fontTools.unicodedata import script
-
 # Open nmap path file
 with open("nmap_dir.txt") as f:
     nmap = f.read().strip()
@@ -26,10 +24,6 @@ if not speed:
 else:
     speed = "-T" + speed
 
-
-
-#print(*ports) Verify ports
-#print(speed) Verify speed
 
 # Build nmap command
 command = [nmap, *ports, speed]
